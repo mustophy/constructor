@@ -54,12 +54,12 @@ const SearchInput = ({ placeholder }) => (
     <div className="hide-mobile relative shadow-boxShadow1">
         <SearchIcon className="absolute top-4 left-[26px]" />
         <ArrowRight className="absolute top-4 right-[26px]" />
-        <input placeholder={placeholder} type="text" className="bg-white shadow-boxShadow1 block rounded-[30px] py-4 px-[60px] w-[430px] h-[50px] placeholder:text-[12px] placeholder:leading-[20px] placeholder:text-gray-blue-100" />
+        <input placeholder={placeholder} type="text" className="bg-white shadow-boxShadow1 block rounded-[30px] py-4 px-[60px] w-[330px] h-[50px] placeholder:text-[12px] placeholder:leading-[20px] placeholder:text-gray-blue-100" />
     </div>
 )
 
 const MobileSidebar = ({hide}) => (
-    <div className="h-screen fixed shadow-2xl top-0 left-0 w-[60vw] flex flex-col gap-y-10 pl-10 transition-all duration-700 bg-white z-30 translate-x-[-250%]" id="mobile-nav">
+    <div className="h-screen fixed sm:hidden shadow-2xl top-0 left-0 w-[60vw] flex flex-col gap-y-10 pl-10 transition-all duration-700 bg-white z-30 translate-x-[-250%]" id="mobile-nav">
         <h3 onClick={hide} className="mt-20 text-2xl font-[500] -tracking-widest">X</h3>
         <div className="flex gap-x-4 items-center mt-20">
             <div className="w-5">
