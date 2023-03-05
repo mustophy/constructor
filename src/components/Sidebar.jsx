@@ -3,7 +3,7 @@ import { BuildingIcon, ChartIcon, MessengerIcon, NavigationIcon, StarIcon, WebIc
 
 const Sidebar = () => {
     return (
-        <div className="hide-mobile w-[100px] h-screen fixed left-0 border-r-2 pt-[30px] border-border flex flex-col bg-background">
+        <div className="hide-mobile w-[100px] h-screen fixed left-0 border-r-2 pt-[30px] border-border/5 flex flex-col bg-dark-80">
             <div className="flex flex-col gap-y-5 items-center">
                 {routes.map(route => (
                     <IconCard>

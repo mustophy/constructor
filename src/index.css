@@ -9,20 +9,24 @@
   box-sizing: border-box;
 }
 
+body {
+  @apply bg-[#181618]
+}
+
 .slide-in {
   @apply !translate-x-0
 }
 
 h2{
-  @apply text-gray-blue-500 font-[700] text-lg leading-[30px]
+  @apply text-white font-[700] text-lg leading-[30px]
 }
 
 h3 {
-  @apply text-gray-blue-400 font-[700] text-[13px] leading-[25px] 
+  @apply text-white font-[700] text-[13px] leading-[25px] 
 }
 
 p {
-  @apply font-[700] text-xs leading-[20px] text-gray-blue-400
+  @apply font-[700] text-xs leading-[20px] text-gray-100
 }
 
 span {

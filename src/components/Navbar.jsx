@@ -12,18 +12,18 @@ const Navbar = () => {
         mobileNav.classList.remove('slide-in')
     }
     return (
-        <div className="h-[100px] z-10 sticky top-0 p-[25px] bg-background flex items-center border-b border-border">
+        <div className="h-[100px] z-10 sticky top-0 p-[25px] bg-dark-80 flex items-center border-b border-border">
             <IconCard onClick={() => showSidebar()}>
                 <MenuIcon className="cursor-pointer" onc />
             </IconCard>
             <MobileSidebar hide={() => hideNav()}/>
             <Link>
-                <h2>Constructor</h2>
+                <h2 className="ml-5">Constructor</h2>
             </Link>
             <ul className="hide-mobile sm:flex items-center gap-x-[25px] mx-20">
                 {routes.map(route => (
                     <Link to={route.url}>
-                        <li className="text-[13px] font-[700] text-gray-blue-200">{route.name}</li>
+                        <li className="text-[13px] font-[700] text-white">{route.name}</li>
                     </Link>
                 ))}
                 <li>
@@ -54,12 +54,12 @@ const SearchInput = ({ placeholder }) => (
     <div className="hide-mobile relative shadow-boxShadow1">
         <SearchIcon className="absolute top-4 left-[26px]" />
         <ArrowRight className="absolute top-4 right-[26px]" />
-        <input placeholder={placeholder} type="text" className="bg-white shadow-boxShadow1 block rounded-[30px] py-4 px-[60px] w-[430px] h-[50px] placeholder:text-[12px] placeholder:leading-[20px] placeholder:text-gray-blue-100" />
+        <input placeholder={placeholder} type="text" className="bg-dark-70 text-white shadow-boxShadow1 block rounded-[30px] py-4 px-[60px] w-[350px] h-[50px] placeholder:text-[12px] placeholder:leading-[20px] placeholder:text-gray-blue-100" />
     </div>
 )
 
 const MobileSidebar = ({hide}) => (
-    <div className="h-screen fixed shadow-2xl top-0 left-0 w-[60vw] flex flex-col gap-y-10 pl-10 transition-all duration-700 bg-white z-30 translate-x-[-250%]" id="mobile-nav">
+    <div className="h-screen fixed shadow-2xl top-0 left-0 w-[60vw] flex flex-col gap-y-10 pl-10 transition-all duration-700 bg-dark-80 z-30 translate-x-[-250%]" id="mobile-nav">
         <h3 onClick={hide} className="mt-20 text-2xl font-[500] -tracking-widest">X</h3>
         <div className="flex gap-x-4 items-center mt-20">
             <div className="w-5">

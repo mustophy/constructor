@@ -49,7 +49,7 @@ const Dashboard = () => {
             <InvoiceIcon className="make-white" />
             <p className='text-white mx-auto'>New note</p>
           </button>
-          <div className="flex flex-col px-6 py-[30px] gap-y-[22px] bg-white mt-[15px]">
+          <div className="flex flex-col px-6 py-[30px] gap-y-[22px] bg-dark-80 mt-[15px]">
             {folders.map(folder => (
               <div className="flex items-center">
                 <FolderIcon />
@@ -83,7 +83,7 @@ const Dashboard = () => {
               <DeleteIcon />
             </IconCard>
           </div>
-          <div className={`grid ${displayGrid && 'grid-cols-2'} sm:grid-cols-4 gap-y-[30px] gap-x-[35px] mt-[45px]`}>
+          <div className={`grid sm:grid-cols-2 ${displayGrid && 'grid-cols-2 sm:grid-cols-4'} gap-y-[30px] gap-x-[35px] mt-[45px]`}>
             {[1, 1, 1, 1, 1, 1, 1].map((image, index) => (
               <GridDisplay grid={displayGrid} image={image} index={index} />
             ))}
@@ -103,7 +103,8 @@ const NavComponent = ({ nav, index }) => {
     else if (index == navSections.length - 1) return 'rounded-br-[20px]'
     else if (index == navSections.length - 2) return 'rounded-bl-[20px]'
   }
-  return <div className={`py-[30px] h-[120px] border border-border flex flex-col items-center justify-between ${checkPosition(index)}`}>
+  const activeClassName = ""
+  return <div className={`py-[30px] h-[120px] border border-border flex flex-col items-center gap-y-[26px] ${checkPosition(index)} ${index == 1 && activeClassName}`}>
     {nav.icon}
     <span>{nav.name}</span>
   </div>
